@@ -1,0 +1,21 @@
+# Project Configuration
+
+project:
+  name: ERP_ChatBot
+  version: 0.1.0
+
+paths:
+  raw_pdfs: data/raw_pdfs
+  processed_json: data/processed_json
+  embeddings_db: data/embeddings_db
+
+vector_store:
+  name: chroma_collection
+  persist_directory: data/embeddings_db
+
+model:
+  embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
+  llm_model: "llama3.1"
+
+rag:
+  top_k: 5
